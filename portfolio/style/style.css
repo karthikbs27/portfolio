@@ -11,34 +11,123 @@ body{
     position: absolute;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+    cursor: none;
 }
 
-#bellow{
-    border-radius: 50%;
+#text{
+    margin:auto;
+    width: 600px;
     position: absolute;
-    width: 700px;
+    top: 40%;
     left: 50%;
-    margin-left: -350px;
-    top: 60%;
-    margin-top: -250px;
-    height: 500px;
-    box-shadow: 0px 0px 600px rgb(179, 179, 179);
-    transform: rotateX(70deg);
+    transform: translate(-50%,-50%);
 }
 
 .head{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     font-size: 40px;
+    width: 100%;
 }
 
 .body{
-    position: absolute;
-    font-size: 20px;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
+    width: 100%;
 }
+
+#cursor{
+    background-color: #39e600;
+    position:absolute;
+    height: 12px;
+    width: 12px;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+
+#cursorback{
+    position:absolute;
+    height: 15px;
+    width: 15px;
+    z-index: 300;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+#cursorchild{
+    background-color:  #39e600;
+    position:absolute;
+    height: 7px;
+    width: 7px;
+    z-index: 280;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 3px solid black;
+    transition: .5s;
+}
+
+
+.disk{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 250;
+    border-radius: 50%;
+}
+
+#main{
+    transition: 2s;
+    display: none;
+    opacity: 0;
+}
+
+@keyframes disk0 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk1 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk2 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk3 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk4 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk5 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk6 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk7 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk8 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+
+@keyframes disk9 {
+    from{transform: rotate(0deg);}
+    to  {transform: rotate(360deg);}
+}
+

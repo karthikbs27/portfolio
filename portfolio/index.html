@@ -9,34 +9,40 @@
     
     </head>
 
-    <body>
+    <body onload="preload()">
 
-        <div id="bellow"></div>
-        <div id ="text">
-            <text class="head" id="head0"></text>
-            <text class="head" id="head1"></text>
-            <text class="head" id="head2"></text>
-            <text class="head" id="head3"></text>
-            <text class="head" id="head4"></text>
-            <text class="head" id="head5"></text>
-            <text class="head" id="head6"></text>
-            <text class="head" id="head7"></text>
-            <text class="head" id="head8"></text>
-            <text class="head" id="head9"></text>
-            <text class="head" id="head10"></text>
+        <div id="cursor"></div>
+        <div id="cursorback"></div>
+        <div id ="cursorchild"></div>
 
-            <text class="body" id = "heada0"></text>
-            <text class="body" id = "heada1"></text>
-            <text class="body" id = "heada2"></text>
-            <text class="body" id = "heada3"></text>
-            <text class="body" id = "heada4"></text>
-            <text class="body" id = "heada5"></text>
-            <text class="body" id = "heada6"></text>
-            <text class="body" id = "heada7"></text>
-            <text class="body" id = "heada8"></text>
-            <text class="body" id = "heada9"></text>
-            <text class="body" id = "heada10"></text>
+        <div id="loading" style="transition: 2s;">
+            <div class="disk" id="disk0" style="width: 200px; height: 200px; margin-left: -105px; margin-top: -105px; border: 5px solid #2f2f2f; border-top: 5px solid  #6699ff; animation: disk0 7s infinite linear;"></div>
+            <div class="disk" id="disk1" style="width: 190px; height: 190px; margin-left: -98px; margin-top: -98px; border: 3px solid #2f2f2f; border-right: 3px solid#fc6464; animation: disk1 5s infinite linear;"></div>
+            <div class="disk" id="disk2" style="width: 180px; height: 180px; margin-left: -94px; margin-top: -94px; border: 4px solid #2f2f2f; border-left: 4px solid #f5ec6f; animation: disk2 6s infinite linear;"></div>
+            <div class="disk" id="disk3" style="width: 172px; height: 172px; margin-left: -89px; margin-top: -89px; border: 3px solid #2f2f2f; border-bottom: 3px solid  #85ff81; animation: disk3 4s infinite linear;"></div>
+            <div class="disk" id="disk4" style="width: 160px; height: 160px; margin-left: -85px; margin-top: -85px; border: 5px solid #2f2f2f; border-top: 5px solid  #ffab66; animation: disk4 3s infinite linear;"></div>
+            <div class="disk" id="disk5" style="width: 130px; height: 130px; margin-left: -71px; margin-top: -71px; border: 6px solid #2f2f2f; border-left: 6px solid  #6699ff; animation: disk5 2s infinite linear;"></div>
+            <div class="disk" id="disk6" style="width: 176px; height: 176px; margin-left: -90px; margin-top: -90px; border: 2px solid #2f2f2f; border-left: 2px solid  #fc6464; opacity: .4; animation: disk6 5s infinite linear;"></div>
+            <div class="disk" id="disk7" style="width: 194px; height: 194px; margin-left: -101px; margin-top: -101px; border: 4px solid #2f2f2f; border-right: 4px solid  #f5ec6f; opacity: .4; animation: disk7 4s infinite linear;"></div>
+            <div class="disk" id="disk8" style="width: 208px; height: 208px; margin-left: -107px; margin-top: -107px; border: 3px solid #2f2f2f; border-top: 3px solid  #85ff81; opacity: .4; animation: disk8 4s infinite linear;"></div>
+            <div class="disk" id="disk9" style="width: 184px; height: 184px; margin-left: -95px; margin-top: -95px; border: 3px solid #2f2f2f; border-top: 3px solid  #ffab66; opacity: .4; animation: disk9 6s infinite linear;"></div>
         </div>
+
+        
+        
+        
+        <div id="main">
+            <div id ="text">
+                <div>
+                    <text class="head" id="head">Hi, I am Karthik B S</text>
+                </div>
+                <div>
+                    <text class="body" id = "body"></text>
+                </div>
+            </div>
+        </div>
+
+        
 
 
     </body>
