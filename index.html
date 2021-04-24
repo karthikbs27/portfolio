@@ -6,16 +6,16 @@
         <link rel="stylesheet" href = "files/style/style.css" >
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+        <title>MY page</title>
     
     </head>
 
-    <body onload="preload()">
+    <body onload="work()">
 
-        <div id="cursor"></div>
-        <div id="cursorback"></div>
-        <div id ="cursorchild"></div>
+        
 
-        <div id="loading" style="transition: 2s;">
+        <div id="loading">
+            <text style="margin: 20px; position:absolute; top: 0px; right: 0px; color: black; animation: blink .5s linear infinite;"> Move over the planet to access</text>
             <div class="disk" id="disk0" style="width: 200px; height: 200px; margin-left: -105px; margin-top: -105px; border: 5px solid #2f2f2f; border-top: 5px solid  #6699ff; animation: disk0 7s infinite linear;"></div>
             <div class="disk" id="disk1" style="width: 190px; height: 190px; margin-left: -98px; margin-top: -98px; border: 3px solid #2f2f2f; border-right: 3px solid#fc6464; animation: disk1 5s infinite linear;"></div>
             <div class="disk" id="disk2" style="width: 180px; height: 180px; margin-left: -94px; margin-top: -94px; border: 4px solid #2f2f2f; border-left: 4px solid #f5ec6f; animation: disk2 6s infinite linear;"></div>
@@ -32,17 +32,33 @@
         
         
         <div id="main">
+
+            <div>
+                <a href="#" onmouseover="expand('About', this)" onmouseout="contract()"><img src = "files/images/planet1.png" style=" position:absolute; width: 20%; margin-top: -7%; margin-left: 7%; position:absolute;"></a>
+                <a href="#" onmouseover="expand('works', this)" onmouseout="contract()"><img src = "files/images/planet2.png" style="width: 30%; margin: -15%; position: absolute; bottom: 0px; right: 0px;"></a>
+            </div>
+
+
             <div id ="text">
                 <div>
                     <text class="head" id="head">Hi, I am Karthik B S</text>
                 </div>
                 <div>
-                    <text class="body" id = "body"></text>
+                    <text class="body" id = "body"></text><text id="blink" style="animation: blink .5s linear infinite;">|</text>
                 </div>
+            </div>
+
+            <div id="contact">
+                <a href="https://github.com/karthikbs27" target="_blank" onmouseover="expand('GitHub', this)" onmouseout="contract()"><img id="github" src="files/images/github.png" height="30" style="margin-right: 10px; cursor: none"></a>
+                <a href="https://www.linkedin.com/in/karthik-b-s-5569961b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtTQCRABXSiCwJmR6V2ImnA%3D%3D" target="_blank" onmouseover="expand('Linkedin', this)" onmouseout="contract()"><img id="linkedin" src="files/images/linkedin.png" height="30" style="margin-right: 10px;"></a>
+                <a href="mailto: karthik2000tbt@gmail.com" target="_blank" onmouseover="expand('Email', this)" onmouseout="contract()"><img id="email" src="files/images/gmail.png" height="30" style="margin-right: 10px; cursor: none"></a>
+                <a href="https://www.instagram.com/karthik__b_s_/" target="_blank" onmouseover="expand('Instagram', this)" onmouseout="contract()"><img id="insta" src="files/images/insta.png" height="30" style="margin-right: 10px; cursor: none"></a>
             </div>
         </div>
 
-        
+        <div id ="cursorchild"></div>
+        <div id="cursor"></div>
+        <div id="cursorback"><div id="textinside"></div></div>
 
 
     </body>
