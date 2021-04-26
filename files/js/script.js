@@ -3,8 +3,7 @@ scrheight = window.screen.height;
 scrwidth = window.screen.width;
 bodytext = "I am a front-end web designer and an asparent for learning back-end. I have great interest on web develpment, image processing and data science using machine learning ."
 
-var kd = document.getElementById("main").style.zIndex
-console.log(kd)
+
 
 textinside = document.getElementById("textinside")
 cursor = document.getElementById("cursor")
@@ -27,11 +26,17 @@ function work(){
 }
 
 function preload(){
-    var load = document.getElementById("loading")
-    load.style.display = "none"
-    var main = document.getElementById("main")
-    main.style.display = "block"
+    load = document.getElementById("loading")
+    main = document.getElementById("main")
+    
+    load.style.transform = "scale(2)"
+    load.style.opacity = "0"
     main.style.opacity = "1"
+    main.style.transform = "scale(1)"
+    setTimeout(() =>{
+        load.style.display = "none"
+    }, 1000)
+
 }
 
 var i = 0 
@@ -68,4 +73,60 @@ function contract(){
     
     textinside.style.display = "none"
     cursorchild.style.opacity = "1"
+}
+
+pages = ["main","about","work"]
+var present = 0;
+num = 0
+ite = 0
+var works = false; 
+function scrolled(event, pag){
+
+    if(works) {console.log("no multiple threads"); return}
+    else if(!works){
+
+        dir = event.deltaY
+        num = num + dir
+
+        if(num >= 200 || num <= -200){
+            works = true
+    
+            ind = pages.indexOf(pag)
+            console.log(present, dir, num)
+
+            if (dir  > 0){ 
+                if (present == 2) console.log("Already in last page")
+                else {nextpage(pages[present], pages[present + 1], 1); present = present + 1}
+            }
+            else if( dir < 0){
+                if(present == 0) console.log("Alredy in first page")
+                else {nextpage(pages[present], pages[present - 1], -1); present = present - 1;}
+            }
+
+            num = 0
+            ite = 0
+            setTimeout(()=>{
+                works = false;
+            }, 1000)
+        }   
+    }
+}
+
+function nextpage(thispage, thatpage, zoom){
+    tha = document.getElementById(thatpage)
+    thi = document.getElementById(thispage)
+
+    if(zoom == 1){
+        tha.style.transform = "scale(1)"
+        thi.style.transform = "scale(2)"
+    }
+    else if(zoom == -1){
+        tha.style.transform = "scale(1)"
+        thi.style.transform = "scale(0.5)"
+    } 
+    thi.style.opacity = "0"
+    tha.style.opacity = "1"
+    thi.style.pointerEvents = "none"
+    tha.style.pointerEvents = "auto"
+    
 }
