@@ -17,9 +17,9 @@ body{
 }
 
 #text{
-    margin:auto;
     width: 600px;
-    position: absolute;
+    height: 200px;
+    position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -80,7 +80,7 @@ body{
     margin-top: -6px;
     margin-left: -6px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid black;
     transition: .3s;
     pointer-events: none;
 }
@@ -107,7 +107,7 @@ body{
 }
 
 #main{
-    background-color: #2f2f2f;
+    background-color:#2f2f2f;
     color: #2a2a2a;
     color: #8a8a8a;
     position: absolute;
@@ -190,4 +190,38 @@ body{
     opacity: 0;
     transform: scale(0.5);
     z-index: 50;
+}
+
+.small{
+    position:absolute;
+    background-color: whitesmoke;
+    height: 1px;
+    width: 1px;
+    border-radius: 50%;
+}
+
+.med{
+    position: absolute;
+    background-color: #c5c5c5;
+    height: 3px;
+    width: 3px;
+    border-radius: 30%;
+}
+
+.larg{
+    position: absolute;
+    background-color: #bbbbbb;
+    height: 5px;
+    width: 5px;
+    border-radius: 70%;
+}
+
+@keyframes planet1{
+    from { margin-top: -126px; margin-left: 120px; transform: scale(1) rotate(0deg)}
+    to  { margin-top: 1200px; margin-left: -200px; transform: scale(4) rotate(120deg)}
+}
+
+@keyframes planet2{
+    from { margin: -100px; transform: rotate(-20deg)}
+    to   { margin: -400px; transform: rotate(20deg)}
 }

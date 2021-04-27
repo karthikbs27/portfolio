@@ -36,7 +36,6 @@ function preload(){
     setTimeout(() =>{
         load.style.display = "none"
     }, 1000)
-
 }
 
 var i = 0 
@@ -107,7 +106,7 @@ function scrolled(event, pag){
             ite = 0
             setTimeout(()=>{
                 works = false;
-            }, 1000)
+            }, 800)
         }   
     }
 }
@@ -129,4 +128,51 @@ function nextpage(thispage, thatpage, zoom){
     thi.style.pointerEvents = "none"
     tha.style.pointerEvents = "auto"
     
+}
+
+
+placesmall()
+function placesmall(){
+    temp = document.getElementsByTagName("template")[0]
+    smallscreen = document.getElementById("smallscreen")
+    for (l = 0; l < 300 ; l++ ){
+        clone = temp.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 300))
+        widthval = Math.floor(Math.random() * (scrwidth + 300))
+        clone.querySelectorAll(".small")[0].style.top =  heightval + "px"
+        clone.querySelectorAll(".small")[0].style.left = widthval + "px"
+        smallscreen.appendChild(clone)
+        console.log("shish you man", l)
+    }
+}
+
+
+placemed()
+function placemed(){
+    temp2 = document.getElementsByTagName("template")[1]
+    medscreen = document.getElementById("medscreen")
+    for (l = 0; l < 150 ; l++ ){
+        clone1 = temp2.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 300))
+        widthval = Math.floor(Math.random() * (scrwidth + 300))
+        clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
+        medscreen.appendChild(clone1)
+        console.log("shish you women", l)
+    }
+}
+
+placelarg()
+function placelarg(){
+    temp3 = document.getElementsByTagName("template")[2]
+    largscreen = document.getElementById("largscreen")
+    for (l = 0; l < 50 ; l++ ){
+        clone1 = temp3.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 300))
+        widthval = Math.floor(Math.random() * (scrwidth + 300))
+        clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
+        largscreen.appendChild(clone1)
+        console.log("shish you trans", l)
+    }
 }
