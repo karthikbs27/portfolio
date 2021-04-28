@@ -1,7 +1,7 @@
 console.log("shish")
 scrheight = screen.height;
 scrwidth = screen.width;
-bodytext = "I am a front-end web designer and an asparent for learning back-end. I have great interest on web develpment, image processing and data science using machine learning ."
+bodytext = "I am a front-end web developer and an aspirant towards learning back-end. I have a great interest in web development, image processing and data science using machine learning."
 
 
 
