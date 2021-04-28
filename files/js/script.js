@@ -1,6 +1,6 @@
 console.log("shish")
-scrheight = window.screen.height;
-scrwidth = window.screen.width;
+scrheight = screen.height;
+scrwidth = screen.width;
 bodytext = "I am a front-end web designer and an asparent for learning back-end. I have great interest on web develpment, image processing and data science using machine learning ."
 
 
@@ -52,8 +52,11 @@ function expand(x, y){
     console.log("expand fun")
     y.style.cursor = "none"
     cursor.style.opacity = "0"
-    cursorback.style.transition = "0.3s"
+    cursorback.style.transition = "0.1s"
     cursorback.style.transform = "scale(5)"
+    setTimeout(()=>{
+        cursorback.style.transition = "0s"
+    }, 100)
     cursorback.style.border = "1px solid #39e600"
     textinside.style.display = "block"
     textinside.innerHTML = x;
@@ -174,5 +177,7 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen.appendChild(clone1)
         console.log("shish you trans", l)
+        document.getElementById("head").innerHTML = scrheight
+        document.getElementById("body").innerHTML = scrwidth
     }
 }
