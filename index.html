@@ -34,12 +34,14 @@
         <div id="main" onmousewheel="scrolled(event, 'main')">
 
             <div id="smallscreen" style="z-index: 122;"></div>
-            <div id="medscreen" style="z-index: 125;"></div>
-            <div id="largscreen" style="z-index: 128;"></div>
+            <div id="medscreen" style="z-index: 125; position:absolute; right: 100%; animation: medlayer 200s infinite  linear; animation-delay: -100s;"></div>
+            <div id="largscreen" style="z-index: 128; position:absolute; animation: medlayer 100s infinite  linear; animation-delay: -50s;"></div>
+            <div id="medscreen2" style="z-index: 125; position:absolute; right: 100%; animation: medlayer 200s infinite linear"></div>
+            <div id="largscreen2" style="z-index: 128; position:absolute; animation: medlayer 100s infinite linear"></div>
 
             <div>
-                <a href="#" onmouseover="expand('About', this)" onmouseout="contract()"><img src = "files/images/planet1.png" style=" position:absolute; width: 20%; margin-top: -126px; margin-left: 120px; animation: planet1 200s infinite linear"></a>
-                <a href="#" onmouseover="expand('works', this)" onmouseout="contract()"><img src = "files/images/planet2.png" style="width: 30%; margin: -100px; position: absolute; bottom: 0px; right: 0px; animation: planet2 400s infinite linear alternate"></a>
+                <a href="#" onmouseover="expand('About', this)" onmouseout="contract()"><img src = "files/images/planet1.png" style=" position:absolute; z-index: 130; width: 20%; margin-top: -126px; margin-left: 120px; animation: planet1 200s infinite linear alternate"></a>
+                <a href="#" onmouseover="expand('works', this)" onmouseout="contract()"><img src = "files/images/planet2.png" style="width: 30%; margin: -100px;z-index: 129; position: absolute; bottom: 0px; right: 0px; animation: planet2 400s infinite linear alternate"></a>
             </div>
 
 

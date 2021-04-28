@@ -22,7 +22,7 @@ function work(){
     setTimeout(() =>{
         preload()
         type()
-    }, 5000)
+    }, 50)
 }
 
 function preload(){
@@ -153,15 +153,25 @@ function placesmall(){
 placemed()
 function placemed(){
     temp2 = document.getElementsByTagName("template")[1]
-    medscreen = document.getElementById("medscreen")
+    medscreen1 = document.getElementById("medscreen")
+    medscreen2 = document.getElementById("medscreen2")
     for (l = 0; l < 150 ; l++ ){
         clone1 = temp2.content.cloneNode(true)
-        heightval = Math.floor(Math.random() * (scrheight + 300))
-        widthval = Math.floor(Math.random() * (scrwidth + 300))
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
         clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
         medscreen.appendChild(clone1)
         console.log("shish you women", l)
+    }
+    for (l = 0; l < 150 ; l++ ){
+        clone1 = temp2.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
+        medscreen2.appendChild(clone1)
+        console.log("shish you wemen", l)
     }
 }
 
@@ -169,6 +179,7 @@ placelarg()
 function placelarg(){
     temp3 = document.getElementsByTagName("template")[2]
     largscreen = document.getElementById("largscreen")
+    largscreen2 = document.getElementById("largscreen2")
     for (l = 0; l < 50 ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 300))
@@ -176,8 +187,13 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen.appendChild(clone1)
-        console.log("shish you trans", l)
-        document.getElementById("head").innerHTML = scrheight
-        document.getElementById("body").innerHTML = scrwidth
+    }
+    for (l = 0; l < 50 ; l++ ){
+        clone1 = temp3.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 300))
+        widthval = Math.floor(Math.random() * (scrwidth + 300))
+        clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
+        largscreen2.appendChild(clone1)
     }
 }

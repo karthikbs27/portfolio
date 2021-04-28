@@ -181,6 +181,7 @@ body{
 
 #contact > a {
     margin-right: 20px;
+    z-index: 134;
 }
 
 #about{
@@ -224,11 +225,16 @@ body{
 }
 
 @keyframes planet1{
-    from { margin-top: -126px; margin-left: 120px; transform: scale(1) rotate(0deg)}
-    to  { margin-top: 1200px; margin-left: -200px; transform: scale(4) rotate(120deg)}
+    from { margin-top: -7%; margin-left: 7%; transform: scale(1) rotate(0deg)}
+    to  { margin-top: 105%; margin-left: -50%; transform: scale(4) rotate(120deg)}
 }
 
 @keyframes planet2{
-    from { margin: -100px; transform: rotate(-20deg)}
-    to   { margin: -400px; transform: rotate(20deg)}
+    from { margin: -20%; transform: rotate(-20deg)}
+    to   { margin: -50%; transform: rotate(20deg)}
+}
+
+@keyframes medlayer{
+    from {left: -100%}
+    to { left: 100%}
 }
