@@ -2,7 +2,7 @@
 <html lang = 'en'>
     <head>
 
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href = "files/style/style.css" >
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
         
 
         <div id="loading">
-            <text style="margin: 20px; position:absolute; top: 0px; right: 0px; color: #8a8a8a; animation: blink .5s linear infinite;"> Hover over the planet<br>Rotate the mouse wheel </text>
+            <text style="margin: 20px; position:absolute; top: 0px; right: 0px; color: #8a8a8a; animation: blink .5s linear infinite;"> Rotate the mouse wheel </text>
             <div class="disk" id="disk0" style="width: 200px; height: 200px; margin-left: -105px; margin-top: -105px; border: 5px solid #2a2a2a; border-top: 5px solid  #6699ff; animation: disk 7s infinite linear;"></div>
             <div class="disk" id="disk1" style="width: 190px; height: 190px; margin-left: -98px; margin-top: -98px; border: 3px solid #2a2a2a; border-right: 3px solid#fc6464; animation: disk 5s infinite linear;"></div>
             <div class="disk" id="disk2" style="width: 180px; height: 180px; margin-left: -94px; margin-top: -94px; border: 4px solid #2a2a2a; border-left: 4px solid #f5ec6f; animation: disk 6s infinite linear;"></div>
@@ -41,8 +41,8 @@
             <div id="largscreen2" style="z-index: 128; position:absolute; animation: layer 100s infinite linear"></div>
 
             <div>
-                <a href="#" onmouseover="expand('About', this)" onmouseout="contract()"><img src = "files/images/planet1.png" style=" position:absolute; z-index: 129; width: 20%; animation: planet1 200s infinite linear alternate"></a>
-                <a href="#" onmouseover="expand('works', this)" onmouseout="contract()"><img src = "files/images/planet2.png" style="width: 30%; z-index: 130; position: absolute; bottom: 0px; right: 0px; animation: planet2 400s infinite linear alternate"></a>
+                <img src = "files/images/planet1.png" style=" position:absolute; z-index: 129; width: 20%; animation: planet1 200s infinite linear alternate">
+                <img src = "files/images/planet2.png" style="width: 30%; z-index: 130; position: absolute; bottom: 0px; right: 0px; animation: planet2 400s infinite linear alternate">
             </div>
 
 
@@ -55,12 +55,16 @@
                 </div>
             </div>
 
-            <div id="contact">
-                <a href="https://github.com/karthikbs27" target="_blank" onmouseover="expand('GitHub', this)" onmouseout="contract()"><img id="github" src="files/images/github.png" height="30"></a>
-                <a href="https://www.linkedin.com/in/karthik-b-s-5569961b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtTQCRABXSiCwJmR6V2ImnA%3D%3D" target="_blank" onmouseover="expand('Linkedin', this)" onmouseout="contract()"><img id="linkedin" src="files/images/linkedin.png" height="30"></a>
-                <a href="mailto: karthik2000tbt@gmail.com" target="_blank" onmouseover="expand('Email', this)" onmouseout="contract()"><img id="email" src="files/images/gmail.png" height="30"></a>
-                <a href="https://www.instagram.com/karthik__b_s_/" target="_blank" onmouseover="expand('Instagram', this)" onmouseout="contract()"><img id="insta" src="files/images/insta.png" height="30"></a>
+            <div style="width: 200px; text-align: center; display: flex; flex-direction: column-reverse; position:absolute; left: 5%; bottom: 5%; ">
+                <div id="contact">
+                    <a href="https://github.com/karthikbs27" target="_blank" onmouseover="expand('GitHub', this)" onmouseout="contract()"><img id="github" src="files/images/github.png" height="30"></a>
+                    <a href="https://www.linkedin.com/in/karthik-b-s-5569961b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BtTQCRABXSiCwJmR6V2ImnA%3D%3D" target="_blank" onmouseover="expand('Linkedin', this)" onmouseout="contract()"><img id="linkedin" src="files/images/linkedin.png" height="30"></a>
+                    <a href="mailto: karthik2000tbt@gmail.com" target="_blank" onmouseover="expand('Email', this)" onmouseout="contract()"><img id="email" src="files/images/gmail.png" height="30"></a>
+                    <a href="https://www.instagram.com/karthik__b_s_/" target="_blank" onmouseover="expand('Instagram', this)" onmouseout="contract()"><img id="insta" src="files/images/insta.png" height="30"></a>
+                </div>
+                <div style="font-size: 12px;">contact</div>
             </div>
+            
         </div>
 
 
@@ -78,7 +82,7 @@
             <div id = "abouttext" style="width: 60%; height: 100%; padding: 20px; position: absolute; left:50%; z-index: 90; transform: translate(-50%,0px); mix-blend-mode: difference;">
                 <p style="color: tomato; font-size: 60px;"> About Me</p>
                 <p><h4>I am a student at The National Institute of Engineering and I am from of Computer Science Branch.</h4></p>
-                <p><h4>Being an engineering student I have come across many technical and non-technical aspects in many fields. Some are, working of Operating systems, Computer Networks, Digital networks, the general design of Compiler, and the design of microprocessors. To stay updated on the current world trend I have worked on C, CPP, Python, javascript, MySQL, Java, HTML, CSS,  XML, and embedded C for Arduino.</h4></p>
+                <p><h4>Being an engineering student I have come across many technical and non-technical skills. Some are, working of Operating systems, Computer Networks, Digital networks, the general design of Compiler, and the design of microprocessors. To stay updated on the current world trend I have worked on C, CPP, Python, javascript, MySQL, Java, HTML, CSS,  XML, and embedded C for Arduino.</h4></p>
                 <p><h4>I have done many projects that include Line following robot, Bluetooth controlled armed robot. Construct-O-Bot (e-yantra competition), Project management system(College project), and some of the android app to know their working. </h4></p>
                 <p><h4>I am interested in many fields. Some are front-end design and animation, back-end design, image processing, data analysis using machine learning, Robotics, and many more.</h4></p>
                 <p><h4>I am an enthusiast who wants to expand the knowledge and skills to be a successful entrepreneur in the future. I believe in “knowing things by working on them” and not by “knowing them first and then working on them”.  I can work in any field with full potential until I know the full depth of the concept.</h4></p>

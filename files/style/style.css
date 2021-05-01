@@ -17,7 +17,7 @@ body{
 }
 
 #text{
-    width: 600px;
+    width: 40%;
     height: 200px;
     position: fixed;
     top: 40%;
@@ -127,16 +127,14 @@ body{
 }
 
 #contact{
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
+    align-items: center;
     height: 5%;
     display: flex;
-    flex-direction: row;
+    margin-top: 10px;
 }
 
 #contact > a {
-    margin-right: 20px;
+    flex: 1;
     z-index: 134;
 }
 
@@ -148,6 +146,7 @@ body{
     background-color: #2f2f2f;
     color: #b4b4b4;
 }
+
 
 #work{
     background-color: aqua;
@@ -197,7 +196,7 @@ body{
 }
 
 #abouttext > p {
-    margin: 10px 0px;
+    margin: 30px 0px;
     mix-blend-mode: difference;
     z-index: 92;
     mix-blend-mode: difference;
