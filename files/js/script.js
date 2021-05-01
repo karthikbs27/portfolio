@@ -1,7 +1,7 @@
 console.log("shish")
 scrheight = screen.height;
 scrwidth = screen.width;
-bodytext = "I am a front-end web developer and an aspirant towards learning back-end. I have a great interest in web development, image processing and data science using machine learning."
+bodytext = "An enthusiastic towards web development, image processing and data science using machine learning."
 
 
 
@@ -22,7 +22,7 @@ function work(){
     setTimeout(() =>{
         preload()
         type()
-    }, 5)
+    }, 5000)
 }
 
 function preload(){
@@ -69,7 +69,7 @@ function contract(){
     cursorchild.style.opacity = "1"
 }
 
-pages = ["main","about","work"]
+pages = ["main","about"]
 var present = 0;
 num = 0
 ite = 0
@@ -89,7 +89,7 @@ function scrolled(event, pag){
             console.log(present, dir, num)
 
             if (dir  > 0){ 
-                if (present == 2) console.log("Already in last page")
+                if (present == 1) console.log("Already in last page")
                 else {nextpage(pages[present], pages[present + 1], 1); present = present + 1}
             }
             else if( dir < 0){
@@ -130,6 +130,7 @@ placesmall()
 function placesmall(){
     temp = document.getElementsByTagName("template")[0]
     smallscreen = document.getElementById("smallscreen")
+    smallscreen1 = document.getElementById("smallscreen1")
     for (l = 0; l < 300 ; l++ ){
         clone = temp.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
@@ -137,6 +138,14 @@ function placesmall(){
         clone.querySelectorAll(".small")[0].style.top =  heightval + "px"
         clone.querySelectorAll(".small")[0].style.left = widthval + "px"
         smallscreen.appendChild(clone)
+    }
+    for (l = 0; l < 300 ; l++ ){
+        clone = temp.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone.querySelectorAll(".small")[0].style.top =  heightval + "px"
+        clone.querySelectorAll(".small")[0].style.left = widthval + "px"
+        smallscreen1.appendChild(clone)
     }
 }
 
@@ -146,13 +155,15 @@ function placemed(){
     temp2 = document.getElementsByTagName("template")[1]
     medscreen1 = document.getElementById("medscreen")
     medscreen2 = document.getElementById("medscreen2")
+    medscreen3 = document.getElementById("medscreen1")
+    medscreen4 = document.getElementById("medscreen22")
     for (l = 0; l < 150 ; l++ ){
         clone1 = temp2.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
         clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
-        medscreen.appendChild(clone1)
+        medscreen1.appendChild(clone1)
     }
     for (l = 0; l < 150 ; l++ ){
         clone1 = temp2.content.cloneNode(true)
@@ -162,20 +173,38 @@ function placemed(){
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
         medscreen2.appendChild(clone1)
     }
+    for (l = 0; l < 150 ; l++ ){
+        clone1 = temp2.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
+        medscreen3.appendChild(clone1)
+    }
+    for (l = 0; l < 150 ; l++ ){
+        clone1 = temp2.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
+        medscreen4.appendChild(clone1)
+    }
 }
 
 placelarg()
 function placelarg(){
     temp3 = document.getElementsByTagName("template")[2]
-    largscreen = document.getElementById("largscreen")
+    largscreen1 = document.getElementById("largscreen")
     largscreen2 = document.getElementById("largscreen2")
+    largscreen3 = document.getElementById("largscreen1")
+    largscreen4 = document.getElementById("largscreen22")
     for (l = 0; l < 50 ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1 ))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
         clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
-        largscreen.appendChild(clone1)
+        largscreen1.appendChild(clone1)
     }
     for (l = 0; l < 50 ; l++ ){
         clone1 = temp3.content.cloneNode(true)
@@ -185,42 +214,20 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen2.appendChild(clone1)
     }
-}
-
-
-galaxystar()
-function galaxystar(){
-    temp = document.getElementsByTagName("template")[3]
-    temp2 = document.getElementsByTagName("template")[1]
-    firstlayer = document.getElementById("wholegalaxy")
-
-    for (l = 0; l < 200; l++ ){
-        clone1 = temp2.content.cloneNode(true)
-        heightval = Math.floor(Math.random() * (600))
-        widthval = Math.floor(Math.random() * (600))
-        clone1.querySelectorAll(".med")[0].style.top =  heightval + "px"
-        clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
-
-        dist = Math.sqrt(Math.pow(300 - heightval, 2) + Math.pow(300 - widthval, 2))
-        ind =  Math.floor(dist / 25)
-        if(dist >= 300) ind = 11
-        document.getElementById("back" + ind).appendChild(clone1)
-        console.log("shish", heightval, widthval ,ind, dist)
+    for (l = 0; l < 50 ; l++ ){
+        clone1 = temp3.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1 ))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
+        largscreen3.appendChild(clone1)
     }
-    for (l = 0; l < 100 ; l++ ){
-        clone1 = temp.content.cloneNode(true)
-        heightval = Math.floor(Math.random() * (600))
-        widthval = Math.floor(Math.random() * (600))
-        color = '#'+Math.floor(Math.random()*16777215).toString(16);
-        clone1.querySelectorAll(".medstar")[0].style.top =  heightval + "px"
-        clone1.querySelectorAll(".medstar")[0].style.left = widthval + "px"
-        clone1.querySelectorAll(".medstar")[0].style.backgroundColor = color
-        dist = Math.sqrt(Math.pow(300 - heightval, 2) + Math.pow(300 - widthval, 2))
-        ind =  Math.floor(dist / 25)
-        if(dist >= 300) ind = 11
-        document.getElementById("back" + ind).appendChild(clone1)
-        console.log("shish2", heightval, widthval ,ind, dist)
+    for (l = 0; l < 50 ; l++ ){
+        clone1 = temp3.content.cloneNode(true)
+        heightval = Math.floor(Math.random() * (scrheight + 1))
+        widthval = Math.floor(Math.random() * (scrwidth + 1))
+        clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
+        clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
+        largscreen4.appendChild(clone1)
     }
-
-    
 }
