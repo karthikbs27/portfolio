@@ -8,7 +8,7 @@ body{
     background-color: #2a2a2a;
     color: #2a2a2a;
     color: #8a8a8a;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -128,14 +128,15 @@ body{
 
 #contact{
     align-items: center;
-    height: 5%;
     display: flex;
+    flex-wrap: nowrap;
     margin-top: 10px;
 }
 
 #contact > a {
     flex: 1;
     z-index: 134;
+    margin: 7px;
 }
 
 #about{
@@ -212,4 +213,36 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: gray;
     background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 600px){
+
+    #text{
+        width: 70%;
+    }
+
+    .head{
+        font-size: 25px;
+    }
+
+    .body{
+        font-size: 10px;
+    }
+    #letter, #cursor, #cursorback, #cursorchild, #textinside {
+        display: none;
+    }
+
+    #contact{
+        flex-direction: column;
+    }
+    
+    #animationloader{
+        transform: scale(0.5)
+    }
+
+    #loading > text{
+        font-size: 10px;
+    }
+    
 }

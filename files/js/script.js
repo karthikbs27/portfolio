@@ -1,6 +1,7 @@
 console.log("shish")
 scrheight = screen.height;
 scrwidth = screen.width;
+if (scrwidth < 600) document.getElementsByTagName("text")[0].innerHTML = "Swipe up and down"
 bodytext = "An enthusiast for learning web development, image processing and data science using machine learning."
 
 
@@ -228,6 +229,7 @@ function placelarg(){
         widthval = Math.floor(Math.random() * (scrwidth + 1))
         clone1.querySelectorAll(".larg")[0].style.top =  heightval + "px"
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
-        largscreen4.appendChild(clone1)
+        largscreen4.appendChild(clone1) 
     }
 }
+
