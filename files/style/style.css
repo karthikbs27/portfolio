@@ -148,7 +148,6 @@ body{
     color: #b4b4b4;
 }
 
-
 #work{
     background-color: aqua;
     transition: 1s;
@@ -196,11 +195,26 @@ body{
     to { left: 100%}
 }
 
+#abouttext{
+    width: 60%; 
+    height: 100%; 
+    padding: 20px; 
+    position: absolute; 
+    left:50%; 
+    z-index: 90; 
+    transform: translate(-50%,0px); 
+    mix-blend-mode: difference;
+}
+
 #abouttext > p {
     margin: 30px 0px;
     mix-blend-mode: difference;
     z-index: 92;
-    mix-blend-mode: difference;
+}
+
+#abt{
+    color: tomato; 
+    font-size: 60px;
 }
 
 ::-webkit-scrollbar{
@@ -229,6 +243,7 @@ body{
     .body{
         font-size: 10px;
     }
+    
     #letter, #cursor, #cursorback, #cursorchild, #textinside {
         display: none;
     }
@@ -243,6 +258,15 @@ body{
 
     #loading > text{
         font-size: 10px;
+    }
+
+    #abt{
+        font-size: 25px;
+    }
+
+    #abouttext {
+        font-size: 10px;
+        width: 80%;
     }
     
 }

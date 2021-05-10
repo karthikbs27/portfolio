@@ -73,33 +73,42 @@ function contract(){
 pages = ["main","about"]
 var present = 0;
 num = 0
-ite = 0
 var works = false; 
+function swiping(event, pa){
+    touch1 = event.touches[0]
+    start1X = touch1.screenX
+    
+    document.getElementById(pa).addEventListener("touchmove", e => {
+        end1X = e.touches[0].screenX
+        if (start1X - end1X > 80) scrolled(200, pa)
+        else if(start1X - end1X < -80) scrolled(-200, pa)
+    })
+    
+}
 function scrolled(event, pag){
 
     if(works) {console.log("no multiple threads"); return}
     else if(!works){
 
-        dir = event.deltaY
-        num = num + dir
+        console.log(typeof(event))
+        if(typeof(event) == "number") num = event
+        else { dir = event.deltaY ; num = num + dir; console.log(present, dir, num) }
 
         if(num >= 200 || num <= -200){
             works = true
-    
             ind = pages.indexOf(pag)
-            console.log(present, dir, num)
+            
 
-            if (dir  > 0){ 
+            if (num  > 0){ 
                 if (present == 1) console.log("Already in last page")
                 else {nextpage(pages[present], pages[present + 1], 1); present = present + 1}
             }
-            else if( dir < 0){
+            else if( num < 0){
                 if(present == 0) console.log("Alredy in first page")
                 else {nextpage(pages[present], pages[present - 1], -1); present = present - 1;}
             }
 
             num = 0
-            ite = 0
             setTimeout(()=>{
                 works = false;
             }, 800)
@@ -127,12 +136,22 @@ function nextpage(thispage, thatpage, zoom){
 }
 
 
+if (scrwidth > 600){
+    smallno = 300
+    medno = 150
+    largno = 50
+} else{
+    smallno = 100
+    medno = 30
+    largno = 20
+}
+
 placesmall()
 function placesmall(){
     temp = document.getElementsByTagName("template")[0]
     smallscreen = document.getElementById("smallscreen")
     smallscreen1 = document.getElementById("smallscreen1")
-    for (l = 0; l < 300 ; l++ ){
+    for (l = 0; l < smallno ; l++ ){
         clone = temp.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -140,7 +159,7 @@ function placesmall(){
         clone.querySelectorAll(".small")[0].style.left = widthval + "px"
         smallscreen.appendChild(clone)
     }
-    for (l = 0; l < 300 ; l++ ){
+    for (l = 0; l < smallno ; l++ ){
         clone = temp.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -151,6 +170,7 @@ function placesmall(){
 }
 
 
+
 placemed()
 function placemed(){
     temp2 = document.getElementsByTagName("template")[1]
@@ -158,7 +178,7 @@ function placemed(){
     medscreen2 = document.getElementById("medscreen2")
     medscreen3 = document.getElementById("medscreen1")
     medscreen4 = document.getElementById("medscreen22")
-    for (l = 0; l < 150 ; l++ ){
+    for (l = 0; l < medno ; l++ ){
         clone1 = temp2.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -166,7 +186,7 @@ function placemed(){
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
         medscreen1.appendChild(clone1)
     }
-    for (l = 0; l < 150 ; l++ ){
+    for (l = 0; l < medno ; l++ ){
         clone1 = temp2.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -174,7 +194,7 @@ function placemed(){
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
         medscreen2.appendChild(clone1)
     }
-    for (l = 0; l < 150 ; l++ ){
+    for (l = 0; l < medno ; l++ ){
         clone1 = temp2.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -182,7 +202,7 @@ function placemed(){
         clone1.querySelectorAll(".med")[0].style.left = widthval + "px"
         medscreen3.appendChild(clone1)
     }
-    for (l = 0; l < 150 ; l++ ){
+    for (l = 0; l < medno ; l++ ){
         clone1 = temp2.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -199,7 +219,7 @@ function placelarg(){
     largscreen2 = document.getElementById("largscreen2")
     largscreen3 = document.getElementById("largscreen1")
     largscreen4 = document.getElementById("largscreen22")
-    for (l = 0; l < 50 ; l++ ){
+    for (l = 0; l < largno ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1 ))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -207,7 +227,7 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen1.appendChild(clone1)
     }
-    for (l = 0; l < 50 ; l++ ){
+    for (l = 0; l < largno ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -215,7 +235,7 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen2.appendChild(clone1)
     }
-    for (l = 0; l < 50 ; l++ ){
+    for (l = 0; l < largno ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1 ))
         widthval = Math.floor(Math.random() * (scrwidth + 1))
@@ -223,7 +243,7 @@ function placelarg(){
         clone1.querySelectorAll(".larg")[0].style.left = widthval + "px"
         largscreen3.appendChild(clone1)
     }
-    for (l = 0; l < 50 ; l++ ){
+    for (l = 0; l < largno ; l++ ){
         clone1 = temp3.content.cloneNode(true)
         heightval = Math.floor(Math.random() * (scrheight + 1))
         widthval = Math.floor(Math.random() * (scrwidth + 1))

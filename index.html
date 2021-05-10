@@ -36,7 +36,7 @@
         
         
         
-        <div id="main" onmousewheel="scrolled(event, 'main')">
+        <div id="main" onmousewheel="scrolled(event, 'main')" ontouchstart="swiping(event, 'main')">
 
             <div id="smallscreen" style="z-index: 122;"></div>
             <div id="medscreen" style="z-index: 125; position: absolute; animation: layer 200s infinite  linear; animation-delay: -100s;"></div>
@@ -75,7 +75,7 @@
 
 
 
-        <div id = "about" onmousewheel="scrolled(event, 'about')" style="position: absolute; width: 100%; height: 100%; overflow-y: scroll; overflow-x: hidden; ">
+        <div id = "about" onmousewheel="scrolled(event, 'about')" ontouchstart="swiping(event, 'about')" style="position: absolute; width: 100%; height: 100%; overflow-y: scroll; overflow-x: hidden; ">
             
             <div id="smallscreen1" style="z-index: 85;"></div>
             <div id="medscreen1" style="z-index: 86; position: absolute; animation: layer 200s infinite  linear; animation-delay: -100s;"></div>
@@ -83,8 +83,8 @@
             <div id="medscreen22" style="z-index: 88; position:absolute; animation: layer 200s infinite linear"></div>
             <div id="largscreen22" style="z-index: 89; position:absolute; animation: layer 100s infinite linear"></div>
             
-            <div id = "abouttext" style="width: 60%; height: 100%; padding: 20px; position: absolute; left:50%; z-index: 90; transform: translate(-50%,0px); mix-blend-mode: difference;">
-                <p style="color: tomato; font-size: 60px;"> About Me</p>
+            <div id = "abouttext">
+                <p id="abt"> About Me</p>
                 <p><h4>I am a student at The National Institute of Engineering and I am from of Computer Science Branch.</h4></p>
                 <p><h4>Being an engineering student I have come across many technical and non-technical skills. Some are, working of Operating systems, Computer Networks, Digital networks, the general design of Compiler, and the design of microprocessors. To stay updated on the current world trend I have worked on C, CPP, Python, javascript, MySQL, Java, HTML, CSS,  XML, and embedded C for Arduino.</h4></p>
                 <p><h4>I have done many projects that include Line following robot, Bluetooth controlled armed robot. Construct-O-Bot (e-yantra competition), Project management system(College project), and some of the android app to know their working. </h4></p>
