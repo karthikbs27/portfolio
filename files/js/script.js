@@ -1,7 +1,7 @@
 console.log("shish")
 scrheight = screen.height;
 scrwidth = screen.width;
-if (scrwidth < 600) document.getElementsByTagName("text")[0].innerHTML = "Swipe up and down"
+if (scrwidth < 600) document.getElementsByTagName("text")[0].innerHTML = "Swipe right and left.."
 bodytext = "An enthusiast for learning web development, image processing and data science using machine learning."
 
 
